@@ -13,9 +13,12 @@
 
 
 extern void skiplist_i_test();
+extern void skiplist_iv_test();
+
 
 CU_TestInfo skiplist_tests[] = {
 	{ "skiplist_i",			skiplist_i_test },
+	{ "skiplist_iv",		skiplist_iv_test },
 };
 
 
@@ -42,7 +45,7 @@ int main()
 
 
 	CU_automated_run_tests();
-	fprintf(stdout, "%d", CU_get_error());
+	fprintf(stdout, "%d\n", CU_get_error());
 
 	CU_cleanup_registry();
 

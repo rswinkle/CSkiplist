@@ -1,0 +1,37 @@
+CSKIPLIST
+
+(c) Robert Winkler 2011
+=======
+
+
+This is a simple implementation of a skiplist.  I originally
+planned to make a more complete version like CVector but
+trying to design a skiplist implementation that takes advantage
+of all the variations and optimizations of skiplists and presents
+a clean, easy to use API seems virtually impossible.  Since I design
+it with how I would use it in mind, I thought it'd be better to just
+make these 2 simple versions and if I ever need to, I can add to
+these and modify them with the extensions/optimizations.
+
+Some of the things you can change/select/implement for skiplists are
+
+P value 
+K value (P and k can be used to optimize for size vs speed)
+Max level (= log_1/P(N) where N is max number of elements)
+Whether to allow duplicates (and how to deal with them either way)
+Whether to allow arbitrary key types and allow user to specify compare function
+Optimize for locality of reference searches using search fingers
+Optimize for expensive comparisons
+Modify to work like a vector, accessing elements by index
+Merge, Concatenate, Split algorithms
+
+etc.
+
+You can read all about skiplists on wikipidia and read some
+of William Pugh's papers and see example code for a basic implementation
+here:
+
+ftp://ftp.cs.umd.edu/pub/skipLists/
+
+I've run it under valgrind so there are no memory leaks/problems.  My tests
+all pass but they could probably be more thorough.
